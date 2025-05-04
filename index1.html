@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qaraqalpaq So‘zlik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Urbanist', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #f8f9fa, #e3f2fd);
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+
+    nav {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      color: #1a237e;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #37474f;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1a237e;
+    }
+
+    section {
+      padding: 2em 1em;
+      display: none;
+      animation: fade 0.5s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: #0d47a1;
+      font-size: 1.5rem;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      margin-left: 1.5em;
+      padding-left: 0;
+    }
+
+    img, iframe {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 1em;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 0.75em;
+      margin-top: 0.5em;
+      border: 1px solid #cfd8dc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.75em 1.5em;
+      background: #1a237e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #3949ab;
+    }
+
+    .profile-info {
+      background: #f0f4ff;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-top: 1em;
+    }
+
+    .language-selector {
+      margin-top: 1em;
+      padding: 0.75em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #ffffff;
+      font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 0.5em 0 0 0;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      nav h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <script>
+        function showSection(id) {
+          document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+          });
+          document.getElementById(id).classList.add('active');
+        }
+      </script>
+  <nav>
+    <h1>Qaraqalpaqsan tárixiy orınlar</h1>
+    <div>
+      <a href="javascript:void(0);" onclick="showSection('home')">Bas bet</a>
+      <a href="javascript:void(0);" onclick="showSection('mizdaxkan')">Mizdaxkan</a>
+      <a href="javascript:void(0);" onclick="showSection('topraqqala')">Topraqqala</a>
+      <a href="javascript:void(0);" onclick="showSection('ayazqala')">Ayazqala</a>
+    </div>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Qaraqalpaqstan - Tariyxıy estelikler hám sayaxatlar</h2>
+    <p>Oraylıq Aziyadaǵı eń áemgi qalalardan biri bolǵan Xojeli qalasınıń ataması, menińshe, "xoja eli" degen mánisti ańlatadı. Biraq kópshilik "zıyaratshılar eli" degen mánini beredi," deydi. Áyyemde Xojelidiń atı Mizdahqan bolǵan. Házirgi waqıtta ulıwma maydanı 2000 kvadrat kilometr átirapındaǵı úlken qoyımshılıq Mizdahqan atı menen ataladı.
+     Kóplegen ájayıp ápsana hám ráwiyatlar menen baylanıslı tariyxıy estelikler hám muqaddes zıyarat etiw orınları menen belgili Mizdaxandaǵı maqbaraǵa hár jılı júz mıńlaǵan zıyarachılar keledi.</p>
+    <h3>Usınıs etilgen orınlar</h3>
+    <ul>
+      <li><a href="javascript:void(0);" onclick="showSection('mizdaxkan')">Mizdaxkan</a></li>
+      <li><a href="javascript:void(0);" onclick="showSection('topraqqala')">Topraqqala</a></li>
+      <li><a href="javascript:void(0);" onclick="showSection('ayazqala')">Ayazqala</a></li>
+    </ul>
+  </section>
+
+  <section id="mizdaxkan">
+    <h2>Mizdaxqan - Tariyxıy estelik</h2>
+    <p>Usı kúnge shekem elimizde jerlew eki túrli kóriniste ámelge asırılatuǵının biler edim. Yaǵnıy, hámmemiz biletuǵın dástúriy qábir elimizdiń barlıq aymaqlarında belgili. Ekinshi túrdegi jerlew máresimi Xorezm, qisman Qoqanda bolip, dene arnawli saǵanalarga qoyıladı. Xojelidegi Mizdaxqan qoyımshılıǵında qábirler basqasha ekenine itibar qarattım. YAǵnıy, qábir qazılmaydı. Gór tereń qazıladı, dene qoyılǵannan soń, ústine aǵash qoyıladı (bul processti túrk seriallarında kórgenbiz), soń topıraq tartıladı. Aradan jıllar ótip aǵashlar shiredi hám topıraq basıp qaladı. Adamlar kózine qábirler sál ashılıp qalǵanday kórinedi. Eń qızıǵı, elimizdiń barlıq aymaqlarında marhumlar ushın ulıwma tabıtlardan paydalanıladı.
+     Biraq Mizdahqan kompleksindegi qábirstanlar ústinde marhumlardıń deneleri alıp kelingen úlken-kishi tabıtlarǵa kózińiz túsedi.</p>
+    <h3>Tariyxıy maǵlıwmatlar</h3>
+    <ul>
+      <li>Mizdaxkan VII ásirde shólkemlestirilgen.</li>
+      <li>Áyyemgi sawda jollarınıń orayı bolǵan.</li>
+      <li>Estelikler arasında shirkewler, ibadatxanalar bar.</li>
+    </ul>
+    <h3>Súwret</h3>
+    <img src="1.jpg" alt="Mizdaxkan obidasi">
+    <h3>Jaylasıwı (Xarita)</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+  </section>
+
+  <section id="topraqqala">
+    <h2>Topıraqqala - Tariyxıy estelik</h2>
+    <p>Topıraq qala yamasa "Jer qalası" - Áyyemgi Xorezmniń eń bahalı hám sawlatlı esteliklerinen biri. Qaraqalpaqstan Respublikası Ellikqala rayonı aymaǵında, Bostan awılınan 12 km aralıqta jaylasqan.
+       Áyyemgi Xorezm civilizaciyasınıń basqa da kóplegen estelikleri sıyaqlı bul estelik te belgili arxeolog hám tariyxshı Sergey Pavlovich Tolstov tárepinen tabılǵan.
+     Bul izlew jumısları 1938-jılı júz bergen. Qalanıń maydanı 120 gektardı quraydı hám keyin ala málim bolıwınsha, bir waqıtları bul jerde qorǵanıw diywalı hám kvadrat minaralar menen qorshalǵan qala hám saltanatlı qala-saray bolǵan.
+     Bir waqıtları sawlatlı qala áemgi qalanıń ózegi bolıp, eramızdıń II-III ásirlerinde Xorezm shahlarınıń rezidenciyası bolǵan. Bul jerde, qorganiw diywalı artında dushpan hújimlerinen qorganiw galereyaları bolıp, kóplegen kósheler hám sawda orınları jaylasqan, sonday-aq, orayda keń aldınģi kóshe bar bolgan. Áyyemgi qala sonshelli úlken edi, oniń aymaģı 200 ge jaqın xojalıq hám turaq jay imaratlarınan ibarat 10 kvartaldı óz ishine algan. Hár bir kvartalda ózleriniń kishi-orayları bolıp, olarda zıyarat orınları hám ónermenchilik imaratları jaylasqan. Qalada 2,5 minnan aslam xalıq jasagan, olardıń yarımı saray rezidenciyasında islegen.
+    </p>
+    <h3>Tariyxıy maǵlıwmatlar</h3>
+    <ul>
+      <li>Topıraqqala óziniń joqarı qorǵanıw diywalları menen belgili.</li>
+      <li>Tariyxıy áhmiyetke iye bolǵan kóplegen estelikler saqlanǵan.</li>
+    </ul>
+    <h3>Súwret</h3>
+    <img src="3.jpg" alt="Topıraqqala esteligi">
+    <h3>Joylashuvi (Xarita)</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+  </section>
+
+  <section id="ayazqala">
+    <h2>Ayazqala - Tariyxıy estelik</h2>
+    <p>Ráwiyatlarga qaraganda, áyyemde Xorezm pachalarınan biri dushpanlardıń basqınshılıǵına qarsı mámleketiniń shegarasında úlken qorǵan quriwga qarar etedi. Ol: "Kim dushpan kire almaytuģın úlken qorgan qursa, ogan gózzal qızımdı beremen," dep járiyalagan. Usı úlkede jasaytuǵın Ayaz ismli shopan bul juwapkershilikti óz moynına alıwǵa qarar etedi hám qala qurılısın baslaydı. 
+    Jigit qurılısqa qansha waqıt sarplaǵanı belgisiz, biraq patsha óz sózinde turmaydı hám qızın basqa adamǵa turmısqa berdi. Qala qurılısı bolsa aqırına jetpey qaladı. Ayaz qala Qaraqalpaqstannıń eń sulıw estelikleriniń biri bolıp esaplanadı. Mıń jıllar aldın bul jerde - Sultan Uays taw dizbeginiń shıǵıs tárepinde jaylasqan tóbeshikte bir emes, úsh qala bolǵan.Ayaz qala-1 qalashası yamasa "samal astındaǵı qala" tóbeshiktiń ózinde jaylasqan bolıp, Qızılqum shóliniń shetindegi bekkem qala esaplanadı, óz waqtında kóshpelilerdiń basqınshılıǵına qarsı qorǵanıw wazıypasın atqarǵan.</p>
+    <h3>Tariyxıy maǵlıwmatlar</h3>
+    <ul>
+      <li>Ayazqala tariyxıy áhmiyetke iye bolǵan eń iri qalalardan biri bolip esaplanadı.</li>
+      <li>Bul jerde Afriǵiyler dinastiyasına tiyisli Xorezm shahlarınıń, atap aytqanda shah Braviktiń teńgeleri tabılgan.</li>
+
+    </ul>
+    <h3>Súwret</h3>
+    <img src="4.jpg" alt="Ayazqala esteligi">
+    <h3>Joylashuvi (Xarita)</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+  </section>
+
+  <script>
+    function showSection(sectionId) {
+      // Barcha bo‘limlarni yashirish
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+
+      // Tanlangan bo‘limni ko‘rsatish
+      var activeSection = document.getElementById(sectionId);
+      activeSection.classList.add('active');
+    }
+  </script>
+</body>
+</html>
